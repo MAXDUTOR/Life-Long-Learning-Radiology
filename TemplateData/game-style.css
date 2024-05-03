@@ -1,0 +1,196 @@
+body {
+    background-image: url(Cover-2.jpg);
+    height: 100vh;
+    display: flex;
+    border: 10%;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.title {
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+
+}
+
+.webgl-content {
+    display: block;
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+.box {
+    background-color: rgba(240, 248, 255, 0.174);
+    width: 500px;
+    height: auto;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(20px);
+    border-color: antiquewhite;
+}
+
+#button-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+#button-back {
+    color: black;
+    background-color: rgba(127, 255, 212, 0.701);
+    backdrop-filter: blur(10px);
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(153, 164, 164, 0.212);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.webgl-content .logo,
+.progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.webgl-content .logo {
+    background: url('progressLogo.Light.png') no-repeat center / contain;
+    width: 154px;
+    height: 130px;
+}
+
+.webgl-content .progress {
+    height: 18px;
+    width: 141px;
+    margin-top: 90px;
+}
+
+.webgl-content .progress .empty {
+    background: url('progressEmpty.Light.png') no-repeat right / cover;
+    float: right;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.webgl-content .progress .full {
+    background: url('progressFull.Light.png') no-repeat left / cover;
+    float: left;
+    width: 0%;
+    height: 100%;
+    display: inline-block;
+}
+
+.webgl-content .logo.Dark {
+    background-image: url('progressLogo.Dark.png');
+}
+
+.webgl-content .progress.Dark .empty {
+    background-image: url('progressEmpty.Dark.png');
+}
+
+.webgl-content .progress.Dark .full {
+    background-image: url('progressFull.Dark.png');
+}
+
+.webgl-content .footer {
+    margin-top: 5px;
+    height: 38px;
+    line-height: 38px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.webgl-content .footer .webgl-logo,
+.title,
+.fullscreen {
+    display: inline-block;
+    background: transparent center no-repeat;
+}
+
+.webgl-content .footer .webgl-logo {
+    background-image: url('webgl-logo.png');
+    width: 204px;
+    float: left;
+}
+
+.webgl-content .footer .title {
+    margin-right: 10px;
+    float: right;
+}
+
+.fullscreen {
+    background-image: url('fullscreen.png');
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    display: block;
+    z-index: 5;
+}
+
+#unityContainer {
+    width: 100%;
+    height: auto;
+}
+
+#play-button {
+    position: absolute;
+    z-index: 5;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+}
+
+#canvas * {
+    border-radius: 30px !important;
+}
+
+#blur-cover {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+}

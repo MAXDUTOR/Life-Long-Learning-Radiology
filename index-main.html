@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Long Learning: Radiology</title>
+    <link rel="shortcut icon" href="/TemplateData/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center;">
+            <img src="TemplateData/webgl-logo.png" alt=""
+                style="max-height: 25px;margin-left: auto;margin-right: auto;margin-top: 10vh;">
+        </div>
+        <h1 class="title">Life Long Learning: Radiology</h1>
+        <div class="box">
+            <p style="text-align: center;padding: 10px;margin: 0%;">Select the course for begin the test</p>
+            <div id="button-box">
+                <button type="button" id="button-c" class="collapsible">Course 1</button>
+                <div class="content">
+                    <a href="/course-1/part-1/index.html"> Part 1&nbsp;</a>
+                    <a href="/course-1/part-2/index.html"> Part 2&nbsp;</a>
+                    <a href="/course-1/part-3/index.html"> Part 3&nbsp;</a>
+                    <a href="/course-1/part-4/index.html"> Part 4&nbsp;</a>
+                </div>
+                <button type="button" id="button-c" class="collapsible" style="margin-top: 10px;">Course 2</button>
+                <div class="content">
+                    <a href="/course-2/part-1/index.html"> Part 1&nbsp;</a>
+                    <a href="/course-2/part-2/index.html"> Part 2&nbsp;</a>
+                    <a href="/course-2/part-3/index.html"> Part 3&nbsp;</a>
+                    <a href="/course-2/part-4/index.html"> Part 4&nbsp;</a>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+
+</body>
+
+</html>
