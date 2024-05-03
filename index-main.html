@@ -38,25 +38,31 @@
                     <a href="/course-2/part-3/index.html"> Part 3&nbsp;</a>
                     <a href="/course-2/part-4/index.html"> Part 4&nbsp;</a>
                 </div>
-
+                <button type="button" id="button-c" class="collapsible" style="margin-top: 10px;">Course 3</button>
+                <div class="content">
+                    <a href="/course-3/part-1/index.html"> Part 1&nbsp;</a>
+                    <a href="/course-3/part-2/index.html"> Part 2&nbsp;</a>
+                    <a href="/course-3/part-3/index.html"> Part 3&nbsp;</a>
+                    <a href="/course-3/part-4/index.html"> Part 4&nbsp;</a>
+                </div>
             </div>
         </div>
         <script>
             var coll = document.getElementsByClassName("collapsible");
             var i;
-            
+
             for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                } 
-              });
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
             }
-            </script>
+        </script>
 
 </body>
 
