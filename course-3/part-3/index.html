@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Life Long Learning: Radiology</title>
+  <script>// Function to modify autoplay behavior of videos within Unity containers
+    function modifyAutoplayBehavior() {
+      // Find Unity containers
+      var unityContainers = document.querySelectorAll('.unity-container');
+
+      // Iterate over each Unity container
+      unityContainers.forEach(function (container) {
+        // Find video elements within the container
+        var videos = container.querySelectorAll('video');
+
+        // Modify autoplay behavior for each video
+        videos.forEach(function (video) {
+          // Add autoplay and muted attributes
+          video.setAttribute('autoplay', true);
+          video.setAttribute('muted', true);
+        });
+      });
+    }
+
+    // Function to start playback of videos
+    function startPlayback() {
+      // Find Unity containers
+      var unityContainers = document.querySelectorAll('.unity-container');
+
+      // Iterate over each Unity container
+      unityContainers.forEach(function (container) {
+        // Find video elements within the container
+        var videos = container.querySelectorAll('video');
+
+        // Start playback for each video
+        videos.forEach(function (video) {
+          video.play();
+        });
+      });
+    }
+  </script>
+  <link rel="shortcut icon" href="/TemplateData/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/TemplateData\game-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="/TemplateData/UnityProgress.js"></script>
+  <script src="/TemplateData/hls.min.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/public.json", { onProgress: UnityProgress });
+  </script>
+</head>
+
+<body>
+  <div class="webgl-content">
+    <div class="title" style="font-weight: bold;font-size: 30px;padding: 5px;">Course 3 Part 3</div>
+    <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+    <div id="unityContainer"></div>
+    <div class="footer">
+      <div class="webgl-logo"></div>
+    </div>
+    <a href="/index-main.html"><button id="button-back">Back to Menu</button></a>
+  </div>
+  </div>
+</body>
+
+</html>
